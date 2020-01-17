@@ -1,2 +1,2 @@
-# rss2telegram-gcloudfunc
-RSS feed for Telegram using gcloud function
+# rss2telegram
+RSS feed for Telegram using Google Cloud Functions
