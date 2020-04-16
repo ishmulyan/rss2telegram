@@ -24,7 +24,7 @@ var (
 	// client is a global Firestore client, initialized once per instance.
 	client    *firestore.Client
 	converter = md.NewConverter("", true, &md.Options{
-		StrongDelimiter: "*",
+		EmDelimiter: "*",
 	})
 )
 
