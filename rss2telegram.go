@@ -11,21 +11,18 @@ import (
 	"time"
 
 	"cloud.google.com/go/firestore"
-	md "github.com/Skarlso/html-to-markdown"
+	md "github.com/JohannesKaufmann/html-to-markdown"
 	"github.com/mmcdole/gofeed"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 )
 
 var (
-	// projectID is set from the GCP_PROJECT environment variable, which is
-	// automatically set by the Cloud Functions runtime.
+	// projectID is set from the GCP_PROJECT environment variable
 	projectID = os.Getenv("GCP_PROJECT")
 	// client is a global Firestore client, initialized once per instance.
 	client    *firestore.Client
-	converter = md.NewConverter("", true, &md.Options{
-		StrongDelimiter: "*",
-	})
+	converter = md.NewConverter("", true, nil)
 )
 
 func init() {
