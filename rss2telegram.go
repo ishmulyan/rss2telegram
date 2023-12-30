@@ -61,6 +61,7 @@ func RSS2Telegram(ctx context.Context, m PubSubMessage) error {
 
 	// create new feed parser and parse provided rss feed url
 	fp := gofeed.NewParser()
+	fp.UserAgent = "rss2telegram/1.0"
 	feed, err := fp.ParseURL(rssFeedURL)
 	if err != nil {
 		return err
