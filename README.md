@@ -4,7 +4,7 @@ RSS feed for Telegram using Google Cloud Functions
 ## Deployment
 Copy `.env.example.yaml` to `.env.yaml` and put your values in there.
 ```
-gcloud functions deploy RSS2Telegram --env-vars-file .env.yaml --runtime go113 --trigger-topic RSS2Telegram
+gcloud functions deploy RSS2Telegram --env-vars-file .env.yaml --runtime go121 --trigger-topic RSS2Telegram
 ```
 
 ## Testing
